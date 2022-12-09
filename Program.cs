@@ -1,5 +1,18 @@
-﻿int number = ReadInt ("Введите число дня недели от 1 до 7: ")
+﻿Console.Write("Введите число дня недели от 1 до 7: ");
+int numberday = int.Parse(Console.ReadLine()!);
 
-// if number < 1 or number > 7: print('Вы ввели неверное число')
-// if number > 5: print('День выходной!')
-// else: print('Увы, но это рабочий день!')
+if (numberday < 1 || numberday > 7)
+{
+    Console.WriteLine ("Вы ввели неверное число");
+}
+
+if (numberday > 5 && numberday <= 7 )
+{
+    Console.WriteLine ("Да, этот день выходной!");
+}
+
+if (numberday <= 5 && numberday >= 1 )
+{
+    Console.WriteLine ("Нет, этот день не выходной");
+}
+
